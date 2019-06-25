@@ -1,0 +1,15 @@
+.home-container {
+  background-color: red;
+}
+
+.dashboard {
+  background-color: blue;
+  width: 500px;
+  height: 200px;
+}
+
+.home {
+  background-color: peru;
+  width: 500px;
+  height: 200px;
+}
