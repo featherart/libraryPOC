@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Sidebar = () => (
+export const SideNavbar = () => (
   <div>Sidebar</div>
 )
