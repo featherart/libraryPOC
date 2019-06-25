@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link, Router } from '@reach/router'
+import { Header } from './documentation/Header'
 import './app.css'
 
 const App = () => (
   <div className='home-container'>
-    <h1>Header</h1>
+    <Header />
     <nav>
       <Link to="/">Home</Link>{" "}
       <Link to="dashboard">Dashboard</Link>
@@ -28,5 +29,12 @@ const Dashboard = () => (
     <h2>Dashboard</h2>
   </div>
 )
+
+// const Header = () => (
+//   <div className='header-container'>
+//     <img src={img} />
+//     <span>Getting Started</span>
+//   </div>
+// )
 
 export default App

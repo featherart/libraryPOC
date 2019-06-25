@@ -1,5 +1,5 @@
 .home-container {
-  background-color: red;
+  font: "'Open Sans', sans-serif";
 }
 
 .dashboard {
@@ -12,4 +12,11 @@
   background-color: peru;
   width: 500px;
   height: 200px;
+}
+
+.header-container {
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
