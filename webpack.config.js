@@ -2,6 +2,11 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
   module: {
     rules: [
       {
@@ -10,10 +15,21 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.css$/,
+        test: /\.less$/,
         use: [
-          'style-loader',
-          'css-loader'
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "less-loader",
+            options: {
+              strictMath: true,
+              noIeCompat: true,
+            },
+          }
         ]
       },
       {
@@ -31,11 +47,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
-  },
-  output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

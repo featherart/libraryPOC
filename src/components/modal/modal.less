@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'DINWebPro', 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#0b2247;
+}
+
+.header {
+  height: 85px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px;
+  align-items: center;
+  border: 0;
+  height: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.confirm-button {
+  background-color: #76B900;
+  color: #fff;
+}
+
+.confirm-button:hover {
+  background-color: #BBDC80;
+}
+
+.cancel-button:hover {
+  background-color: #eee;
+}
+
+.modal-container {
+  background-color: rgba(33, 33, 33, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #76B900;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.modal-body {
+  background-color: #fff;
+  color: darkslategray;
+  font-size: 1rem;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn ease 3s;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.close-x {
+  color: darkslategray;
+  cursor: pointer;
+}
+
+.close-x:hover {
+  color: darkgray;
+}
+
+/* .fade-in {
+  background-color: #76B900;
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+} */
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}

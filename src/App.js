@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, Router } from '@reach/router'
 import { Header } from './documentation/Header'
-import './app.css'
 
 const App = () => (
   <div className='home-container'>
