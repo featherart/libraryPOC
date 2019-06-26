@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import { useTransition, animated, config } from 'react-spring'
+//import { useTransition, animated, config } from 'react-spring'
 
 const InnerContent = ({
   header,

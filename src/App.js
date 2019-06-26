@@ -1,39 +1,14 @@
 import React from 'react'
-import { Link, Router } from '@reach/router'
 import { Header } from './documentation/Header'
+import { SideNavbar } from './documentation/SideNavbar'
+import { Home } from './documentation/Home'
 
 const App = () => (
-  <div className='home-container'>
+  <div>
     <Header />
-    <nav>
-      <Link to="/">Home</Link>{" "}
-      <Link to="dashboard">Dashboard</Link>
-    </nav>
-
-    <Router>
-      <Home path='/' />
-      <Dashboard path='/dashboard' />
-    </Router>
+    <SideNavbar />
+    <Home />
   </div>
 )
-
-const Home = () => (
-  <div className='home'>
-    <h2>Welcome</h2>
-  </div>
-)
-
-const Dashboard = () => (
-  <div className='dashboard'>
-    <h2>Dashboard</h2>
-  </div>
-)
-
-// const Header = () => (
-//   <div className='header-container'>
-//     <img src={img} />
-//     <span>Getting Started</span>
-//   </div>
-// )
 
 export default App
