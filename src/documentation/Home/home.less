@@ -1,0 +1,48 @@
+@import '../../styles/app';
+@assets: '../../assets';
+
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .leftSide {
+    // TODO why this not work??
+    background-image: url("@{assets}/Background.png");
+    width: 55%;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    > img {
+      height: @largeish;
+      margin-left: @large;
+    }
+  }
+
+  .pronunciation {
+    color: @lightGray500;
+    font-size: @fontSizeMedium;
+    margin: @large;
+    width: @max;
+  }
+
+  .definition {
+    font-size: @fontSizeMedium;
+    width: @supermax;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: @large;
+    }
+  }
+}

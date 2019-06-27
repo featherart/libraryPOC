@@ -1,11 +1,21 @@
-@import '../../styles/color';
-@import '../../styles/fonts';
+@import '../../styles/app';
 
 .sideNavbarContainer {
   display: flex;
   flex-direction: column;
-  width: 80px;
+  width: 200px;
+  height: 100%;
+  font-size: @fontSizeNormal;
+  font-weight: @fontWeightSemibold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 
-  color: @darkGray300;
-  font-family: @brand;
+  a {
+    color: @darkGray300;
+    text-decoration: none;
+  }
+
+  .sideNavbarItem {
+    margin-top: 25px;
+  }
 }

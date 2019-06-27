@@ -1,9 +1,4 @@
-@import '../../styles/color';
-@import '../../styles/fonts';
-
-.headerContainer {
-  width: 60%;
-}
+@import '../../styles/app';
 
 .header {
   background-color: @lightGray000;
@@ -14,13 +9,19 @@
   color: @darkGray300;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
-  height: 50px;
+  height: @larger;
+  margin-bottom: @large;
 
   > img {
-    height: 50px;
+    height: @larger;
+    padding-right: @large;
+  }
+
+  > span {
+    padding-right: @large;
   }
 
   > span:hover {
