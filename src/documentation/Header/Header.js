@@ -1,5 +1,5 @@
 import React from 'react'
-import icon from '../../assets/logo.svg'
+import icon from '../../assets/SOL_logo.svg'
 import style from './header.less'
 
 export const Header = () => (

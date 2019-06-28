@@ -1,29 +1,4 @@
-body {
-  margin: 0;
-  font-family: 'DINWebPro', 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:#0b2247;
-}
-
-.header {
-  height: 85px;
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: #fff;
-  font-size: 2rem;
-}
-
-.app-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 100px;
-}
+@import '../../styles/app';
 
 button {
   display: flex;
@@ -40,12 +15,12 @@ button {
   margin: 10px;
 }
 
-.confirm-button {
-  background-color: #76B900;
-  color: #fff;
+.confirmButton {
+  background-color: @brand;
+  color: @lightGray000;
 }
 
-.confirm-button:hover {
+.confirmButton:hover {
   background-color: #BBDC80;
 }
 
@@ -53,7 +28,7 @@ button {
   background-color: #eee;
 }
 
-.modal-container {
+.modalContainer {
   background-color: rgba(33, 33, 33, 0.7);
   position: absolute;
   top: 0;
@@ -67,7 +42,7 @@ button {
   width: 100%;
 }
 
-.modal-header {
+.modalHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,7 +56,7 @@ button {
   margin-bottom: 25px;
 }
 
-.modal-body {
+.modalBody {
   background-color: #fff;
   color: darkslategray;
   font-size: 1rem;
@@ -108,15 +83,6 @@ button {
 .close-x:hover {
   color: darkgray;
 }
-
-/* .fade-in {
-  background-color: #76B900;
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-  -moz-animation: fadeIn ease 5s;
-  -o-animation: fadeIn ease 5s;
-  -ms-animation: fadeIn ease 5s;
-} */
 
 @keyframes fadeIn{
   0% {

@@ -2,8 +2,10 @@ import React from 'react'
 import { Location, Router, Link } from '@reach/router'
 import { Header } from './documentation/Header'
 import { SideNavbar } from './documentation/SideNavbar'
+import { DefaultError } from './documentation/DefaultError'
 import { Home } from './documentation/Home'
-import { Modal } from './documentation/pages/Modal'
+import { ExamplePage } from './documentation/pages/ExamplePage'
+import { ModalPage } from './documentation/pages/ModalPage'
 import style from './styles/app.less'
 
 const App = props => (
@@ -14,7 +16,9 @@ const App = props => (
       <div className={style.mainContent}>
         <Router>
           <Home path="/" component={Home} />
-          <Modal path="/modal" />
+          <ModalPage path="/modal" />
+          <ExamplePage path='/example' />
+          <DefaultError path='/error' default />
         </Router>
       </div>
     </div>
