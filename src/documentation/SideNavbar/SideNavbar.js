@@ -1,7 +1,5 @@
 import React from 'react'
 import { Location, Router, Link } from '@reach/router'
-// import { Home } from '../Home'
-// import { Modal } from '../pages/Modal'
 
 import style from './sideNavbar.less'
 
@@ -22,25 +20,25 @@ export const SideNavbar = () => (
   <div className={style.sideNavbarContainer}>
     <aside>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/">Overview</NavLink>
+        <NavLink to='/'>Overview</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/alerts">Alerts</NavLink>
+        <NavLink to='/alerts'>Alerts</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/buttons">Buttons</NavLink>
+        <NavLink to='/button'>Buttons</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/dropdown">Dropdown</NavLink>
+        <NavLink to='/dropdown'>Dropdown</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/example">Example Page</NavLink>
+        <NavLink to='/example'>Example Page</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/floatingactionmenu">Floating Action Menu</NavLink>
+        <NavLink to='/floatingactionmenu'>Floating Action Menu</NavLink>
       </div>
       <div className={style.sideNavbarItem}>
-        <NavLink to="/modal">Modals</NavLink>
+        <NavLink to='/modal'>Modals</NavLink>
       </div>
     </aside>
   </div>

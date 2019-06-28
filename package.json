@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "component-playground": "^3.2.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-live": "^2.1.2"
   }
 }

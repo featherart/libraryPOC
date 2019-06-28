@@ -1,12 +1,10 @@
 import React from 'react'
-import { Modal } from '../../components/Modal'
 import background from '../../assets/SOL_Background.png'
 import icon from '../../assets/SOL_logo.svg'
 import style from './home.less'
 
 export const Home = () => (
   <article className={style.homeContainer}>
-    <Modal />
     <div className={style.leftSide}>
       <img src={background} alt="background" />
     </div>
