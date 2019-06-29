@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import style from './modal.less'
 
 const InnerContent = ({
-  header,
+  title,
   content,
   close,
   onCancel,
@@ -13,24 +13,24 @@ const InnerContent = ({
   return ReactDOM.createPortal(
     <div className={style.modalContainer}>
       <div className={style.modalBody}>
-        <header className="modal-header">
+        <header className={style.modalTitle}>
           <span>
-            {header}
+            {title}
           </span>
-          <span className="close-x" onClick={() => close(false)}>
+          <span className={style.closeX} onClick={() => close(false)}>
             ✕
           </span>
         </header>
-        <div className="modal-content">
+        <div className={style.modalContent}>
           {content}
         </div>
-        <div className="modal-actions">
+        <div className={style.modalActions}>
           {onCancel &&
-            <button onClick={() => close(false)} className="cancel-button">
+            <button onClick={() => close(false)} className={style.cancelButton}>
               Cancel
             </button>}
           {onConfirm &&
-            <button onClick={onConfirm} className="confirm-button">
+            <button onClick={onConfirm} className={style.confirmButton}>
               Confirm
             </button>}
         </div>
@@ -42,7 +42,7 @@ const InnerContent = ({
 
 export const Modal = ({
   openMessage,
-  header,
+  title,
   content,
   onConfirm,
   onCancel,
@@ -56,12 +56,12 @@ export const Modal = ({
           className={style.confirmButton}
           onClick={() => toggleShown(!isShown)}
         >
-          {openMessage}
+          {openMessage || 'Open'}
         </button>}
       {isShown &&
         <InnerContent
           close={toggleShown}
-          header={header}
+          title={title}
           content={content}
           onConfirm={onConfirm}
           onCancel={onCancel}
