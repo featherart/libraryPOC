@@ -1,0 +1,26 @@
+@import '../../../styles/color';
+@import '../../../styles/fonts';
+@import '../../../styles/spacing';
+
+.propsTable {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid @lightGray300;
+
+  tbody tr:nth-child(odd) {
+    background-color: @lightGray300;
+  }
+
+  th, td {
+    padding: @large;
+  }
+
+  tr {
+    text-align: left;
+  }
+  
+  th {
+    text-align: left;
+  }
+}

@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -46,6 +47,7 @@ module.exports = {
     ]
   },
   devServer: {
+    historyApiFallback: true,
     host: 'localhost',
     port: 3001,
     hot: true
@@ -54,7 +56,10 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'dist/index.html'
+    })
   ],
   devServer: {
     contentBase: './dist',

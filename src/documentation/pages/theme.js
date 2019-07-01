@@ -12,12 +12,12 @@ export const theme = {
     },
     {
       types: ['property', 'tag', 'boolean', 'number', 'constant', 'symbol'],
-      style: { color: 'hsl(350, 40%, 70%)' }
+      style: { color: 'hsla(333, 26%, 53%, 1)' }
     },
     {
-      types: ['attr-name', 'string', 'char', 'builtin', 'insterted'],
+      types: ['attr-name', 'string', 'char', 'builtin', 'inserted'],
       style: {
-        color: 'hsl(75, 70%, 60%)'
+        color: 'hsla(142, 26%, 53%, 1)'
       }
     },
     {
@@ -30,7 +30,7 @@ export const theme = {
         'language-css'
       ],
       style: {
-        color: 'hsl(40, 90%, 60%)'
+        color: 'hsla(190, 69%, 58%, 1)'
       }
     },
     {
