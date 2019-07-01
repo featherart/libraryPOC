@@ -1,13 +1,13 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import { DefaultError } from './src/documentation/DefaultError'
-import { Home } from './src/documentation/Home'
+import { DefaultError } from './documentation/DefaultError'
+import { Home } from './documentation/Home'
 import {
   ButtonPage,
   DropMenuPage,
   ExamplePage,
   ModalPage
-} from './src/documentation/pages'
+} from './documentation/pages'
 
 export const GlobalRouter = () => (
   <Router>

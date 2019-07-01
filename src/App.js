@@ -1,5 +1,5 @@
 import React from 'react'
-import { GlobalRouter } from '../GlobalRouter'
+import { GlobalRouter } from './GlobalRouter'
 import { Header } from './documentation/Header'
 import { SideNavbar } from './documentation/SideNavbar'
 
