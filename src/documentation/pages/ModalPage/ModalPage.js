@@ -4,12 +4,9 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { Modal } from '../../../components/Modal'
 import { theme } from '../theme'
 import { PropsTable } from '../PropsTable'
+import { Description } from '../Description'
 import { attributes, description } from './config'
 import style from '../pageStyles.less'
-
-const Description = ({ description }) => (
-  <p className={style.description}>{description}</p>
-)
 
 const code = `
 <Modal
@@ -21,19 +18,17 @@ const code = `
   />
 `.trim()
 
-export const ModalPage = () => {
-  return (
-    <div className={style.pageContainer}>
-      <div className={style.title}>Modal</div>
-      <Description description={description} />
-      <div>
-        <LiveProvider code={code} theme={theme} scope={{ Modal }}>
-          <LiveEditor />
-          <LiveError />
-          <LivePreview className={style.displayArea} />
-        </LiveProvider>
-      </div>
-      <PropsTable attributes={attributes} />
+export const ModalPage = () => (
+  <div className={style.pageContainer}>
+    <div className={style.title}>Modal</div>
+    <Description description={description} />
+    <div>
+      <LiveProvider code={code} theme={theme} scope={{ Modal }}>
+        <LiveEditor />
+        <LiveError />
+        <LivePreview className={style.displayArea} />
+      </LiveProvider>
     </div>
-  )
-}
+    <PropsTable attributes={attributes} />
+  </div>
+)
