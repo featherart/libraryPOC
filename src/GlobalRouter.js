@@ -3,18 +3,18 @@ import { Router } from '@reach/router'
 import { DefaultError } from './documentation/DefaultError'
 import { Home } from './documentation/Home'
 import {
+  AlertPage,
   ButtonPage,
   DropMenuPage,
-  ExamplePage,
   ModalPage
 } from './documentation/pages'
 
 export const GlobalRouter = () => (
   <Router>
     <Home path='/' component={Home} />
+    <AlertPage path='/alert' />
     <ButtonPage path='/button' />
     <DropMenuPage path='/dropdown' />
-    <ExamplePage path='/example' />
     <ModalPage path='/modal' />
     <DefaultError path='/error' default />
   </Router>

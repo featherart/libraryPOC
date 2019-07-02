@@ -1,7 +1,7 @@
 import React from 'react'
 import { Location, Router, Link } from '@reach/router'
 
-import style from './sideNavbar.less'
+import './sideNavbar.less'
 
 const NavLink = props => (
   <Link
@@ -17,27 +17,24 @@ const NavLink = props => (
 )
 
 export const SideNavbar = () => (
-  <div className={style.sideNavbarContainer}>
+  <div className={'sideNavbarContainer'}>
     <aside>
-      <div className={style.sideNavbarItem}>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/'>Overview</NavLink>
       </div>
-      <div className={style.sideNavbarItem}>
-        <NavLink to='/alerts'>Alerts</NavLink>
+      <div className={'sideNavbarItem'}>
+        <NavLink to='/alert'>Alerts</NavLink>
       </div>
-      <div className={style.sideNavbarItem}>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/button'>Buttons</NavLink>
       </div>
-      <div className={style.sideNavbarItem}>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/dropdown'>Dropdown</NavLink>
       </div>
-      <div className={style.sideNavbarItem}>
-        <NavLink to='/example'>Example Page</NavLink>
-      </div>
-      <div className={style.sideNavbarItem}>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/floatingactionmenu'>Floating Action Menu</NavLink>
       </div>
-      <div className={style.sideNavbarItem}>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/modal'>Modals</NavLink>
       </div>
     </aside>

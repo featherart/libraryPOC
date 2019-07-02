@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import style from './modal.less'
+import './modal.less'
 
 const InnerContent = ({
   title,
@@ -11,26 +11,26 @@ const InnerContent = ({
   actions
 }) => {
   return ReactDOM.createPortal(
-    <div className={style.modalContainer}>
-      <div className={style.modalBody}>
-        <header className={style.modalTitle}>
+    <div className={'modalContainer'}>
+      <div className={'modalBody'}>
+        <header className={'modalTitle'}>
           <span>
             {title}
           </span>
-          <span className={style.closeX} onClick={() => close(false)}>
+          <span className={'closeX'} onClick={() => close(false)}>
             ✕
           </span>
         </header>
-        <div className={style.modalContent}>
+        <div className={'modalContent'}>
           {content}
         </div>
-        <div className={style.modalActions}>
+        <div className={'modalActions'}>
           {onCancel &&
-            <button onClick={() => close(false)} className={style.cancelButton}>
+            <button onClick={() => close(false)} className={'cancelButton'}>
               Cancel
             </button>}
           {onConfirm &&
-            <button onClick={onConfirm} className={style.confirmButton}>
+            <button onClick={onConfirm} className={'confirmButton'}>
               Confirm
             </button>}
         </div>
@@ -53,7 +53,7 @@ export const Modal = ({
     <div>
       {!isShown &&
         <button
-          className={style.confirmButton}
+          className={'confirmButton'}
           onClick={() => toggleShown(!isShown)}
         >
           {openMessage || 'Open'}

@@ -1,6 +1,6 @@
 import React from 'react'
-import style from './description.less'
+import './description.less'
 
 export const Description = ({ description }) => (
-  <div className={style.description}>{description}</div>
+  <div className={'documentation description'}>{description}</div>
 )

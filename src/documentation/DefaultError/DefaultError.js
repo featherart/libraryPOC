@@ -1,4 +1,4 @@
 import React from 'react'
-import style from './defaultError.less'
+import './defaultError.less'
 
 export const DefaultError = () => <div>Error</div>

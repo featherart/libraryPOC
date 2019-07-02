@@ -4,14 +4,14 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { DropMenu } from '../../../components/DropMenu'
 import { theme } from '../theme'
 import { attributes, description } from './config'
-import style from '../pageStyles.less'
+import '../pageStyles.less'
 
 const Description = ({ description }) => (
-  <p className={style.description}>{description}</p>
+  <p className={'description'}>{description}</p>
 )
 
 const PropsTable = ({ attributes }) => (
-  <table className={style.propsTable}>
+  <table className={'propsTable'}>
     <thead>
       <tr>
         <th>Name</th>
@@ -48,14 +48,14 @@ const code = `
 
 export const DropMenuPage = () => {
   return (
-    <div className={style.pageContainer}>
-      <div className={style.title}>DropMenu</div>
+    <div className={'pageContainer'}>
+      <div className={'title'}>DropMenu</div>
       <Description description={description} />
       <div>
         <LiveProvider code={code} theme={theme} scope={{ DropMenu }}>
           <LiveEditor />
           <LiveError />
-          <LivePreview className={style.displayArea} />
+          <LivePreview className={'displayArea'} />
         </LiveProvider>
       </div>
       <PropsTable attributes={attributes} />

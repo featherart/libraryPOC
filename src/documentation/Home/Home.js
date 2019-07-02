@@ -1,19 +1,19 @@
 import React from 'react'
 import background from '../../assets/SOL_Background.png'
 import icon from '../../assets/SOL_logo.svg'
-import style from './home.less'
+import './home.less'
 
 export const Home = () => (
-  <article className={style.homeContainer}>
-    <div className={style.leftSide}>
-      <img src={background} alt="background" />
+  <article className={'homeContainer'}>
+    <div className={'leftSide'}>
+      <img src={background} alt='background' />
     </div>
-    <div className={style.rightSide}>
-      <img src={icon} alt="icon" />
-      <span className={style.pronunciation}>
+    <div className={'rightSide'}>
+      <img src={icon} alt='icon' />
+      <span className={'pronunciation'}>
         /s&ouml;l/ noun / verb / adj
       </span>
-      <div className={style.definition}>
+      <div className={'definition'}>
         <ol>
           <li>
             The spiritual or immaterial part of a human being or animal,

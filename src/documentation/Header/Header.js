@@ -1,10 +1,10 @@
 import React from 'react'
 import icon from '../../assets/SOL_logo.svg'
-import style from './header.less'
+import './header.less'
 
 export const Header = () => (
-  <header className={style.header}>
-    <img src={icon} alt="logo" />
+  <header className={'documentation header'}>
+    <img src={icon} alt='logo' />
     <span>Getting Started</span>
     <span>Guidelines</span>
     <span>Components</span>

@@ -3,14 +3,14 @@ import { GlobalRouter } from './GlobalRouter'
 import { Header } from './documentation/Header'
 import { SideNavbar } from './documentation/SideNavbar'
 
-import style from './styles/app.less'
+import './styles/app.less'
 
 const App = props => (
-  <div className={style.appContainer}>
+  <div className={'appContainer'}>
     <Header />
-    <div className={style.contentContainer}>
+    <div className={'contentContainer'}>
       <SideNavbar />
-      <div className={style.mainContent}>
+      <div className={'mainContent'}>
         <GlobalRouter />
       </div>
     </div>

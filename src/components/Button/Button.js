@@ -1,16 +1,23 @@
 import React from 'react'
-import style from './button.less'
+import classNames from 'classnames/bind'
+import './button.less'
 
 export const Button = ({
   children,
-  // default,
-  // primary,
-  // flat,
-  // neutral,
-  // danger,
-  // disabled
-}) => (
-  <button className={`${style.button} ${style.confirmButton}`}>
-    {children}
-  </button>
-)
+  primary,
+  flat,
+  className
+}) => {
+  const styles = {
+    primary: 'primary',
+    flat: 'flat'
+  }
+
+  const cx = classNames.bind(styles)
+  console.log('cx', cx)
+  return (
+    <button className='button'>
+      {children}
+    </button>
+  )
+}

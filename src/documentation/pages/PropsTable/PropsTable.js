@@ -1,8 +1,8 @@
 import React from 'react'
-import style from './propsTable.less'
+import './propsTable.less'
 
 export const PropsTable = ({ attributes }) => (
-  <table className={style.propsTable}>
+  <table className={'documentation propsTable'}>
     <thead>
       <tr>
         <th>Name</th>
