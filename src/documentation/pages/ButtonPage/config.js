@@ -1,5 +1,5 @@
 export const description = `
-Buttons are a call to action. This Button offers different styling options that can be combined to create the right button for each action. They may also include an Icon or Tooltip for further guidance.
+Brand compliant buttons that can be primary, flat, neutral or disabled by passing in these props.
 `
 
 export const attributes = [
