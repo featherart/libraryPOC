@@ -1,40 +1,123 @@
 @import '../../styles/app';
 
-button {
-  font-style: normal;
-  line-height: 18px;
-  text-align: left;
-  text-decoration: none;
-  letter-spacing: 0;
-  text-transform: none;
+.ui.button {
   padding: @small @medium;
-  font-size: @medium;
-  font-weight: @fontWeightNormal;
-  position: relative;
+  font-size: @fontSizeNormal;
+  font-weight: @fontWeightSemibold;
+
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
   cursor: pointer;
   user-select: none;
-  text-align: center;
   white-space: nowrap;
+
   border: none;
   border-radius: 0;
   outline: none;
+
   will-change: auto;
-}
+  // primary styles
+  &.primary {
+    color: @lightGray000;
+    background: @brandGreen500;
 
-.confirmButton {
-  background-color: @brand;
-  color: @lightGray000;
-}
+    &:hover {
+      background: @brandGreen700;
+    }
 
-.confirmButton:hover {
-  background-color: @brandGreen700;
-}
+    &:active {
+      background: @brandGreen500;
+    }
 
-.cancelButton {
-  margin-right: @small;
-}
+    &.accessible {
+      color: @green700;
+    }
 
-.cancelButton:hover {
-  background-color: @lightGray300;
+    &.neutral {
+      background-color: @darkGray300;
+      color: @lightGray000;
+
+      &:hover {
+        background-color: @darkGray500;
+      }
+    }
+
+    &.danger {
+      background: @red500;
+
+      &:hover {
+        background: @red700;
+      }
+
+      &:active {
+        background: @red500;
+      }
+    }
+
+    &.disabled {
+      background-color: @lightGray300;
+      cursor: not-allowed;
+    }
+  }
+  // default styles
+  &.defaultStyle {
+    background-color: @lightGray000;
+    color: @brand;
+    border: 1px solid @brand;
+
+    &:hover {
+      background-color: @brandGreen100;
+    }
+
+    &.neutral {
+      background-color: @lightGray000;
+      color: @darkGray300;
+      border: 1px solid @darkGray300;
+
+      &:hover {
+        background-color: @lightGray100;
+      }
+    }
+
+    &.accessible {
+      color: @green500;
+      border: 1px solid @green500;
+    }
+
+    &.disabled {
+      background-color: @lightGray300;
+      color: @lightGray000;
+      cursor: not-allowed;
+      border: none;
+    }
+  }
+  // flat styles
+  &.flat {
+    color: @brand;
+
+    &:hover {
+      background-color: @brandGreen100;
+    }
+
+    &:active {
+      border: 1px solid @brand;
+    }
+
+    &.accessible {
+      color: @green500;
+    }
+
+    &.disabled {
+      color: @lightGray300;
+      border: none;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: @lightGray000;
+      }
+    }
+  }
 }

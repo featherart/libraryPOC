@@ -1,22 +1,29 @@
 import React from 'react'
-import classNames from 'classnames/bind'
+import cx from 'classnames/bind'
 import './button.less'
 
 export const Button = ({
   children,
   primary,
+  defaultStyle,
+  neutral,
   flat,
+  disabled,
+  accessible,
   className
 }) => {
-  const styles = {
-    primary: 'primary',
-    flat: 'flat'
-  }
-
-  const cx = classNames.bind(styles)
-  console.log('cx', cx)
+  const styleClasses = cx(
+    { primary },
+    { defaultStyle },
+    { neutral },
+    { flat },
+    { accessible },
+    { disabled }
+  )
+  const classes = cx('ui', 'button', className, styleClasses)
+  console.log('classes', classes)
   return (
-    <button className='button'>
+    <button className={classes}>
       {children}
     </button>
   )
