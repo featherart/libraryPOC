@@ -60,6 +60,10 @@
     &.disabled {
       background-color: @lightGray300;
       cursor: not-allowed;
+
+      &:hover {
+        background-color: @lightGray300;
+      }
     }
   }
   // default styles
@@ -70,6 +74,11 @@
 
     &:hover {
       background-color: @brandGreen100;
+    }
+
+    &:active {
+      border: 1px solid @brandGreen700;
+      color: @brandGreen700;
     }
 
     &.neutral {
@@ -87,11 +96,30 @@
       border: 1px solid @green500;
     }
 
+    &.danger {
+      color: @red500;
+      border: 1px solid @red500;
+
+      &:hover {
+        background-color: @red100;
+      }
+
+      &:active {
+        border: 1px solid @red700;
+        color: @red700;
+      }
+    }
+
     &.disabled {
       background-color: @lightGray300;
       color: @lightGray000;
       cursor: not-allowed;
       border: none;
+
+      &:hover {
+        background-color: @lightGray300;
+        border: none;
+      }
     }
   }
   // flat styles
@@ -110,6 +138,31 @@
       color: @green500;
     }
 
+    &.neutral {
+      color: @darkGray500;
+
+      &:hover {
+        background-color: @lightGray100;
+      }
+
+      &:active {
+        border: 1px solid @lightGray300;
+      }
+    }
+
+    &.danger {
+      color: @red500;
+
+      &:hover {
+        background-color: @red100;
+        color: @red700;
+      }
+
+      &:active {
+        border: 1px solid @red700;
+      }
+    }
+
     &.disabled {
       color: @lightGray300;
       border: none;
@@ -117,6 +170,11 @@
 
       &:hover {
         background-color: @lightGray000;
+        color: @lightGray300;
+      }
+
+      &:active {
+        border: none;
       }
     }
   }

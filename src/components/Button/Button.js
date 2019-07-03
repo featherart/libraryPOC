@@ -10,6 +10,7 @@ export const Button = ({
   flat,
   disabled,
   accessible,
+  danger,
   className
 }) => {
   const styleClasses = cx(
@@ -18,6 +19,7 @@ export const Button = ({
     { neutral },
     { flat },
     { accessible },
+    { danger },
     { disabled }
   )
   const classes = cx('ui', 'button', className, styleClasses)
