@@ -11,7 +11,8 @@ export const Button = ({
   disabled,
   accessible,
   danger,
-  className
+  className,
+  onClick
 }) => {
   const styleClasses = cx(
     { primary },
@@ -23,9 +24,8 @@ export const Button = ({
     { disabled }
   )
   const classes = cx('ui', 'button', className, styleClasses)
-  console.log('classes', classes)
   return (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       {children}
     </button>
   )

@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
+import { Button } from '../Button'
 import './modal.less'
 
 const InnerContent = ({
   title,
   content,
-  close,
+  closeModal,
   onCancel,
   onConfirm,
   actions
@@ -17,7 +18,7 @@ const InnerContent = ({
           <span>
             {title}
           </span>
-          <span className={'closeX'} onClick={() => close(false)}>
+          <span className={'closeX'} onClick={() => closeModal(false)}>
             ✕
           </span>
         </header>
@@ -26,13 +27,13 @@ const InnerContent = ({
         </div>
         <div className={'modalActions'}>
           {onCancel &&
-            <button onClick={() => close(false)} className={'cancelButton'}>
+            <Button flat neutral onClick={() => closeModal(false)}>
               Cancel
-            </button>}
+            </Button>}
           {onConfirm &&
-            <button onClick={onConfirm} className={'confirmButton'}>
+            <Button primary onClick={onConfirm}>
               Confirm
-            </button>}
+            </Button>}
         </div>
       </div>
     </div>,
@@ -41,26 +42,30 @@ const InnerContent = ({
 }
 
 export const Modal = ({
-  openMessage,
+  trigger,
+  triggerMessage,
   title,
   content,
   onConfirm,
   onCancel,
   actions
 }) => {
-  const [isShown, toggleShown] = useState(false)
+  const [isShown, toggleShown] = React.useState(false)
+  const Trigger = () =>
+    trigger === 'button'
+      ? <Button primary onClick={() => toggleShown(true)}>
+          {triggerMessage}
+        </Button>
+      : <span onClick={() => toggleShown(true)}>{triggerMessage}</span>
+
   return (
     <div>
       {!isShown &&
-        <button
-          className={'confirmButton'}
-          onClick={() => toggleShown(!isShown)}
-        >
-          {openMessage || 'Open'}
-        </button>}
+        <Trigger />
+      }
       {isShown &&
         <InnerContent
-          close={toggleShown}
+          closeModal={toggleShown}
           title={title}
           content={content}
           onConfirm={onConfirm}
