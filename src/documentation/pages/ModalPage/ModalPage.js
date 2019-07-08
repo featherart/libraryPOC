@@ -1,5 +1,4 @@
 import React from 'react'
-//import { render } from 'react-dom'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { Modal } from '../../../components/Modal'
 import { Button } from '../../../components/Button'
