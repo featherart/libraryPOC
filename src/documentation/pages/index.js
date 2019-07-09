@@ -1,5 +1,6 @@
 export { AlertPage } from './AlertPage'
 export { ButtonPage } from './ButtonPage'
 export { DropMenuPage } from './DropMenuPage'
+export { FloatingActionMenuPage } from './FloatingActionMenuPage'
 export { ModalPage } from './ModalPage'
 export { TooltipPage } from './TooltipPage'

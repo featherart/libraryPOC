@@ -1,7 +1,7 @@
 export const description = `
-Brand compliant buttons that can be primary, flat, neutral or disabled by passing in these props.`
+Brand compliant buttons that can be primary, flat, neutral or disabled.`
 
-export const utilityDescription = `Non-branded buttons for auxiliary and actions.`
+export const utilityDescription = `Non-branded buttons for auxiliary actions.`
 
 export const dangerDescription = `Red buttons to alert users to possibly dangerous or irreversible actions.`
 

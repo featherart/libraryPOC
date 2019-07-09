@@ -1,28 +1,34 @@
-export const description = 'Modals contain a dialogue with action buttons that allow users to confirm or cancel. The default styling is green, with a danger modal styled in red. The default button wording can be overridden with custom messaging.'
+export const description = 'Small feedback elements that can be triggered on click, focus or hover. The default is click. Tooltips can appear in any of the 4 directions around their parent element - top, bottom, left or right. They can be styled with the semantic props critical, information, success or warning.'
 
 export const attributes = [
   {
-    name: 'Title',
+    name: 'header',
     default: '',
     type: 'String',
-    description: 'Modal Title' 
+    description: 'Title header in body of tooltip.' 
   },
   {
-    name: 'content',
+    name: 'message',
+    default: '',
+    type: 'String',
+    description: 'Main message in body of tooltip.' 
+  },
+  {
+    name: 'children',
     default: '',
     type: 'Object',
-    description: 'Content that goes in body of modal.' 
+    description: 'Primary content.' 
   },
   {
-    name: 'OpenMessage',
-    default: 'Open',
+    name: 'placement',
+    default: 'top',
     type: 'String',
-    description: 'Message on the button that opens the modal.' 
+    description: 'Where tooltip appears over child element.' 
   },
   {
-    name: 'onConfirm',
-    default: '',
-    type: 'function',
-    description: 'Function that gets called when confirm button pressed.' 
+    name: 'success',
+    default: 'false',
+    type: 'boolean',
+    description: 'For an action that can be completed successfully.' 
   }
 ]

@@ -9,7 +9,7 @@ import { attributes, description } from './config'
 import '../pageStyles.less'
 
 const code = `
-function openModal() {
+function mountModal() {
   return (
     <Modal
       trigger={'button'}

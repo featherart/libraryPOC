@@ -8,7 +8,31 @@ import { attributes, description } from './config'
 import '../pageStyles.less'
 
 const code = `
-  <Tooltip header={'Title'} message={'Matey aye yardarm man-of-war hands ropes end rigging bilged on her anchor lugsail aft.'} />
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '50px 50px', padding: '25px' }}>
+  <Tooltip
+    header={'Yo Title'}
+    message={'Here be treasure. Thar be dragons.'}>
+      <span>top</span>
+  </Tooltip>
+  <Tooltip
+    position={'right'}
+    header={'Title Here'}
+    message={'Right content here.'}>
+      <span>right</span>
+  </Tooltip>
+  <Tooltip
+    position={'bottom'}
+    header={'Title'}
+    message={'Bottom here.'}>
+    <span>bottom</span>
+  </Tooltip>
+  <Tooltip
+    position={'left'}
+    header={'Title'}
+    message={'Left here.'}>
+    <span>left</span>
+  </Tooltip>
+</div>
 `.trim();
 
 export const TooltipPage = () => (
@@ -19,7 +43,7 @@ export const TooltipPage = () => (
       <LiveProvider code={code} theme={theme} scope={{ Tooltip }}>
         <LiveEditor />
         <LiveError />
-        <LivePreview className={'displayArea dark'} />
+        <LivePreview className={'displayArea'} />
       </LiveProvider>
     </div>
     <PropsTable attributes={attributes} />

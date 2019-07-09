@@ -1,5 +1,7 @@
 export { Alert } from './Alert'
 export { Button } from './Button'
 export { DropMenu } from './DropMenu'
+export { FloatingActionMenu } from './FloatingActionMenu'
+export { Icon } from './Icon'
 export { Modal } from './Modal'
 export { Tooltip } from './Tooltip'
