@@ -55,22 +55,23 @@ render(
 `.trim()
 
 export const ButtonPage = () => (
-  <div className={'pageContainer'}>
-    <div className={'title'}>Brand Buttons</div>
+  <div className='pageContainer'>
+    <div className='title'>Buttons</div>
+    <div className='subTitle'>Brand Buttons</div>
     <Description description={description} />
     <LiveProvider code={code} scope={{ Button }} theme={theme} noInline>
       <LiveEditor />
       <LiveError />
       <LivePreview className={'displayArea'} />
     </LiveProvider>
-    <div className={'title'}>Utility Buttons</div>
+    <div className='subTitle'>Utility Buttons</div>
     <Description description={utilityDescription} />
     <LiveProvider code={utilityCode} scope={{ Button }} theme={theme} noInline>
       <LiveEditor />
       <LiveError />
       <LivePreview className={'displayArea'} />
     </LiveProvider>
-    <div className={'title'}>Danger Buttons</div>
+    <div className='subTitle'>Danger Buttons</div>
     <Description description={dangerDescription} />
     <LiveProvider code={dangerCode} scope={{ Button }} theme={theme} noInline>
       <LiveEditor />

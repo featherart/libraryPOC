@@ -6,18 +6,31 @@
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid @lightGray300;
+  border: 1px solid @lightGray100;
 
   tbody tr:nth-child(odd) {
-    background-color: @lightGray300;
+    background-color: @lightGray100;
+
+    &:hover {
+      background: @lightGray100;
+    }
+  }
+
+  th {
+    color: black;
   }
 
   th, td {
-    padding: @large;
+    padding: @medium;
   }
 
   tr {
     text-align: left;
+    border-bottom: 1pt solid black;
+
+    &:hover {
+      background: @lightGray100;
+    }
   }
   
   th {

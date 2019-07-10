@@ -1,6 +1,5 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import { Home } from './documentation/Home'
 import {
   AlertPage,
   ButtonPage,
@@ -9,6 +8,7 @@ import {
   ModalPage,
   TooltipPage
 } from './documentation/pages'
+import { Home } from './documentation/Home'
 import { DefaultError } from './documentation/DefaultError'
 
 export const GlobalRouter = () => (
