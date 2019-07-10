@@ -15,7 +15,7 @@ export const PropsTable = ({ attributes }) => (
       {attributes &&
         attributes.map((attr, i) => (
           <tr key={i}>
-            <td>{attr.name}</td>
+            <td><div className='propsName'>{attr.name}</div></td>
             <td>{attr.default}</td>
             <td>{attr.type}</td>
             <td>{attr.description}</td>

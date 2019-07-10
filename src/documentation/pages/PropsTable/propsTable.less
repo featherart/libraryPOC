@@ -7,6 +7,7 @@
   width: 100%;
   border-collapse: collapse;
   border: 1px solid @lightGray100;
+  font-size: 14px;
 
   tbody tr:nth-child(odd) {
     background-color: @lightGray100;
@@ -26,7 +27,7 @@
 
   tr {
     text-align: left;
-    border-bottom: 1pt solid black;
+    border-bottom: 1pt solid @darkGray900;
 
     &:hover {
       background: @lightGray100;
@@ -36,4 +37,14 @@
   th {
     text-align: left;
   }
+}
+
+.propsName {
+  // border: 1px solid #9E9E9E;
+  // border-radius: 4px;
+  // padding: 7px;
+  // width: 90px;
+  // display: flex;
+  // justify-content: center;
+  font-weight: @fontWeightSemibold;
 }
