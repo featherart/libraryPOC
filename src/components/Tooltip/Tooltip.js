@@ -22,11 +22,19 @@ export const Tooltip = ({
   message,
   position='top',
   className,
-  success
+  danger,
+  warning,
+  information,
+  success,
+  dark
 }) => {
   const [showTooltip, toggleShow] = useState(false)
   const styleClasses = cx(
+    { danger },
+    { warning },
+    { information },
     { success },
+    { dark },
     `${position}`
   )
   const classes = cx('tooltip-content', className, styleClasses)

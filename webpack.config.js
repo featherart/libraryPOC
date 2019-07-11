@@ -35,7 +35,7 @@ module.exports = {
     historyApiFallback: true,
     host: 'localhost',
     port: 3001,
-    hot: true
+    hot: false
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']

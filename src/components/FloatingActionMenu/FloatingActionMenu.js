@@ -17,6 +17,8 @@ const FloatingActions = ({
               actions.map((action, i) => (
                 <span key={i}>
                   <Tooltip
+                    className='floatingActionMenu'
+                    dark
                     position='left'
                     message={action.tooltip}
                     trigger='hover'
