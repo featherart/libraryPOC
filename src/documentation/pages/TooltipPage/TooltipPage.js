@@ -1,7 +1,7 @@
 import React from 'react'
-import { Tooltip } from '../../../components/Tooltip'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { theme } from '../theme'
+import { Tooltip } from '../../../components/Tooltip'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
 import { attributes, description, darkDescription, semanticDescription } from './config'
@@ -68,7 +68,7 @@ const darkCode = `
 const semanticCode = `
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '50px 50px', padding: '25px' }}>
   <Tooltip
-    success
+    danger
     header={'Success'}
     message={'Here is the treasure.'}>
     <span>top</span>

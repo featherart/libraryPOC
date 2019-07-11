@@ -52,19 +52,19 @@
 
   &.warning {
     background-color: @orange100;
-    border: 1px solid @orange300;
+    border: 2px solid @orange300;
     color: @orange500;
   }
 
   &.information {
     background-color: @blue100;
-    border: 1px solid @blue300;
+    border: 2px solid @blue300;
     color: @blue500;
   }
 
   &.success {
     background-color: @green100;
-    border: 1px solid @green300;
+    border: 2px solid @green300;
     color: @green500;
   }
 }
@@ -75,8 +75,6 @@
 .tooltip-content::after {
   content: '';
   position: absolute;
-  width: 0;
-  height: 0;
   left: 50%;
   transform: translate(-50%, 6px);
   border: 8px solid transparent;
@@ -88,8 +86,26 @@
   border-top-color: rgba(33, 33, 33, 0.9);
 }
 
+.tooltip-content.danger::before,
 .tooltip-content.danger::after {
-  border-top-color: @red100;
+  content: '';
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.tooltip-content.danger::before {
+  border-top: 5px solid @red100;
+  transform: translate(-5px, 0);
+  z-index: 200;
+}
+
+.tooltip-content.danger::after {
+  border-top: 5px solid @red300;
+  margin-top: -4px;
 }
 
 .tooltip-content.warning::after {
