@@ -6,15 +6,24 @@ const TooltipContainer = ({
   toggleShow,
   classes,
   header,
-  message
-}) => (
-  <div className='tooltip-backdrop'>
-    <div className={classes} onMouseLeave={() => toggleShow(false)}>
-      <span className='tooltip-header'>{header}</span>
-      <p className='tooltip-body'>{message}</p>
+  message,
+  dark
+}) => {
+  const styleClasses = cx(
+    { dark }
+  )
+
+  console.log('styleClasses', styleClasses)
+  const innerClasses = cx('tooltip-body', styleClasses)
+  return (
+    <div className='tooltip-backdrop'>
+      <div className={classes} onMouseLeave={() => toggleShow(true)}>
+        <span className='tooltip-header'>{header}</span>
+        <p className={innerClasses}>{message}</p>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export const Tooltip = ({
   children,
@@ -51,6 +60,7 @@ export const Tooltip = ({
           classes={classes}
           header={header}
           message={message}
+          dark={dark}
         />
       }
     </div>

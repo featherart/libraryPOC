@@ -23,12 +23,12 @@ const code = `
   <Tooltip
     position={'bottom'}
     header={'Bottom'}
-    message={'Bottom here.'}>
+    message={'Create Interactive Job.'}>
     <span>bottom</span>
   </Tooltip>
   <Tooltip
     position={'left'}
-    message={'Left, no header.'}>
+    message={'Create Iteractive Job.'}>
     <span>left</span>
   </Tooltip>
 </div>
@@ -59,7 +59,7 @@ const darkCode = `
   <Tooltip
     dark
     position={'left'}
-    message={'Left, no header.'}>
+    message={'Create Interactive Job.'}>
     <span>left</span>
   </Tooltip>
 </div>
@@ -106,7 +106,7 @@ export const TooltipPage = () => (
       <LiveProvider code={code} theme={theme} scope={{ Tooltip }}>
         <LiveEditor />
         <LiveError />
-        <LivePreview className={'displayArea'} />
+        <LivePreview className={'displayArea dark'} />
       </LiveProvider>
     </div>
     <div className='subTitle'>Dark Styling</div>

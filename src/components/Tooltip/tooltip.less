@@ -6,7 +6,7 @@
 .tooltip-backdrop {
   background-color: transparent;
   width: 0px;
-  position: absolute;
+  position: relative;
 }
 
 /*
@@ -17,10 +17,16 @@
 }
 
 .tooltip-body {
-  width: 100%;
+  display: block;
+  max-width: 118px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  color: @darkGray500;
+
+  &.dark {
+    color: @lightGray300;
+  }
 }
 
 /*
@@ -28,8 +34,10 @@
   default is top
 */
 .tooltip-content  {
-  display: block;
-  min-width: 100px;
+  display: inline-block;
+  position: absolute;
+  cursor: help;
+  max-width: 180px;
   padding: 1ch 1.5ch;
   box-shadow: 0 1em 1em -.5em rgba(0, 0, 0, 0.35);
   background-color: @lightGray000;
@@ -40,7 +48,7 @@
   animation: fadeIn ease-in 0.2s;
 
   &.dark {
-    background-color: rgba(33, 33, 33, 0.9);
+    background-color:@darkGray900;
     color: @lightGray000;
   }
 
@@ -83,7 +91,9 @@
 }
 
 .tooltip-content.dark::after {
-  border-top-color: rgba(33, 33, 33, 0.9);
+  content: '';
+  position: absolute;
+  border-top-color:@darkGray900;
 }
 
 /*
@@ -105,14 +115,14 @@
   border-right: 5px solid transparent;
   top: 100%;
   left: 50%;
-  margin-left: -4px;
 }
 
 .tooltip-content.danger::before {
   content: '';
   position: absolute;
-  border-top: 5px solid @red100;
-  transform: translateX(-5px);
+  border-top: 7px solid @red100;
+  margin-top: -1px;
+  margin-left: -3px;
   z-index: 200;
 }
 
@@ -121,12 +131,13 @@
   position: absolute;
   border-top: 5px solid @red300;
   margin-top: -4px;
+  margin-left: 1px;
 }
 
 .tooltip-content.success::before {
   content: '';
   position: absolute;
-  border-top: 5px solid @brandGreen100;
+  border-top: 7px solid @brandGreen100;
   transform: translateX(-5px);
   z-index: 200;
 }
@@ -134,14 +145,15 @@
 .tooltip-content.success::after {
   content: '';
   position: absolute;
-  border-top: 5px solid @brandGreen300;
+  border-top: 7px solid @brandGreen300;
   margin-top: -4px;
+  //margin-left: -1px;
 }
 
 .tooltip-content.warning::before {
   content: '';
   position: absolute;
-  border-top: 5px solid @orange100;
+  border-top: 7px solid @orange100;
   transform: translateX(-5px);
   z-index: 200;
 }
@@ -156,7 +168,7 @@
 .tooltip-content.information::before {
   content: '';
   position: absolute;
-  border-top: 5px solid @blue100;
+  border-top: 7px solid @blue100;
   transform: translateX(-5px);
   z-index: 200;
 }
@@ -164,7 +176,7 @@
 .tooltip-content.information::after {
   content: '';
   position: absolute;
-  border-top: 5px solid @blue300;
+  border-top: 7px solid @blue300;
   margin-top: -4px;
 }
 
@@ -179,34 +191,76 @@
 .tooltip-content.right::after {
   content: '';
   position: absolute;
-  width: 0;
-  height: 0;
-  top: 35%;
+  top: 25%;
   left: 0;
-  transform: translate(-92%, 0%);
-  border: 8px solid transparent;
+  border: 10px solid transparent;
   border-left-width: 0;
   border-right-color: @lightGray000;
 }
 
 .tooltip-content.right.dark::after {
-  border-right-color: rgba(33, 33, 33, 0.9);
+  border-right-color:@darkGray900;
 }
 
+.tooltip-content.right.success::before,
+.tooltip-content.right.danger::before,
+.tooltip-content.right.warning::before,
+.tooltip-content.right.information::before {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: -9px;
+  height: 0;
+  width: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.tooltip-content.right.success::before {
+  border-right: 8px solid @brandGreen300;
+  left: -4px;
+}
+
+.tooltip-content.right.danger::before {
+  border-right: 8px solid @red300;
+}
+
+.tooltip-content.right.warning::before {
+  border-right: 8px solid @orange300;
+  left: -4px;
+}
+
+.tooltip-content.right.information::before {
+  border-right: 8px solid @blue300;
+  left: -4px;
+}
+
+.tooltip-content.right.information::after,
+.tooltip-content.right.success::after,
+.tooltip-content.right.warning::after,
 .tooltip-content.right.danger::after {
-  border-right-color: @red100;
-}
-
-.tooltip-content.right.warning::after {
-  border-right-color: @orange100;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  z-index: 200;
+  margin-left: -1px;
 }
 
 .tooltip-content.right.information::after {
-  border-right-color: @blue100;
+  border-right: 8px solid @blue100;
 }
 
 .tooltip-content.right.success::after {
-  border-right-color: @green100;
+  border-right: 8px solid @brandGreen100;
+}
+
+.tooltip-content.right.warning::after {
+  border-right: 8px solid @orange100;
+}
+
+.tooltip-content.right.danger::after {
+  border-right: 8px solid @red100;
 }
 
 /*
@@ -229,7 +283,7 @@
 }
 
 .tooltip-content.bottom.dark::after {
-  border-bottom-color: rgba(33, 33, 33, 0.9);
+  border-bottom-color:@darkGray900;
 }
 
 /*
@@ -328,33 +382,70 @@
 .tooltip-content.left::after {
   content: '';
   position: absolute;
-  width: 0;
-  height: 0;
-  top: 30%;
-  transform: translate(372%, 0%);
-  border: 8px solid transparent;
+  top: 20%;
+  left: 106%;
+  border: 10px solid transparent;
   border-left-color: @lightGray000;
 }
 
-
 .tooltip-content.left.dark::after {
-  border-left-color: rgba(33, 33, 33, 0.9);
+  border-left-color:@darkGray900;
+}
+
+.tooltip-content.left.danger::before,
+.tooltip-content.left.warning::before,
+.tooltip-content.left.information::before,
+.tooltip-content.left.success::before {
+  content: '';
+  position: absolute;
+  top: 33%;
+  left: 108%;
+  height: 0;
+  width: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.tooltip-content.left.danger::before {
+  border-left: 8px solid @red300;
+  margin-left: -9px;
+}
+
+.tooltip-content.left.success::before {
+  border-left: 8px solid @brandGreen300;
+}
+
+.tooltip-content.left.information::before {
+  border-left: 8px solid @blue300;
+}
+
+.tooltip-content.left.warning::before {
+  border-left: 8px solid @orange300;
+}
+
+.tooltip-content.left.danger::after,
+.tooltip-content.left.warning::after,
+.tooltip-content.left.success::after,
+.tooltip-content.left.information::after {
+  margin-left: 0;
+  top: 26%;
+  z-index: 200;
 }
 
 .tooltip-content.left.danger::after {
-  border-left-color: @red100;
+  border-left: 8px solid @red100;
 }
 
 .tooltip-content.left.warning::after {
-  border-left-color: @orange100;
+  border-left: 8px solid @orange100;
 }
 
 .tooltip-content.left.information::after {
-  border-left-color: @blue100;
+  border-left: 8px solid @blue100;
 }
 
 .tooltip-content.left.success::after {
-  border-left-color: @green100;
+  border-left: 8px solid @brandGreen100;
 }
 
 @keyframes fadeIn {
