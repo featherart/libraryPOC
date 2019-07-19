@@ -1,6 +1,6 @@
 import React from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { theme } from '../theme'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { Tooltip } from '../../../components/Tooltip'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
@@ -74,7 +74,7 @@ const semanticCode = `
     <span>top</span>
   </Tooltip>
   <Tooltip
-    warning
+    information
     position={'right'}
     header={'Information'}
     message={'You might want to know.'}>
