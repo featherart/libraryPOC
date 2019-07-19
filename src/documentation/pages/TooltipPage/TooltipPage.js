@@ -68,13 +68,13 @@ const darkCode = `
 const semanticCode = `
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '50px 50px', padding: '25px' }}>
   <Tooltip
-    danger
+    success
     header={'Success'}
     message={'Here is the treasure.'}>
     <span>top</span>
   </Tooltip>
   <Tooltip
-    information
+    warning
     position={'right'}
     header={'Information'}
     message={'You might want to know.'}>

@@ -122,7 +122,7 @@
   position: absolute;
   border-top: 7px solid @red100;
   margin-top: -1px;
-  margin-left: -3px;
+  margin-left: -4px;
   z-index: 200;
 }
 
@@ -218,21 +218,22 @@
 
 .tooltip-content.right.success::before {
   border-right: 8px solid @brandGreen300;
-  left: -4px;
+  left: -8px;
 }
 
 .tooltip-content.right.danger::before {
   border-right: 8px solid @red300;
+  margin-top: 0px;
 }
 
 .tooltip-content.right.warning::before {
   border-right: 8px solid @orange300;
-  left: -4px;
+  left: -8px;
 }
 
 .tooltip-content.right.information::before {
   border-right: 8px solid @blue300;
-  left: -4px;
+  left: -8px;
 }
 
 .tooltip-content.right.information::after,
@@ -321,7 +322,7 @@
   content: '';
   position: absolute;
   border-bottom: 5px solid @red300;
-  margin-bottom: -4px;
+  margin-left: -3px;
 }
 
 .tooltip-content.bottom.warning::before {
@@ -408,19 +409,23 @@
 
 .tooltip-content.left.danger::before {
   border-left: 8px solid @red300;
-  margin-left: -9px;
+  margin-left: -10px;
+  margin-top: 0;
 }
 
 .tooltip-content.left.success::before {
   border-left: 8px solid @brandGreen300;
+  margin-left: -4px;
 }
 
 .tooltip-content.left.information::before {
   border-left: 8px solid @blue300;
+  margin-left: -4px;
 }
 
 .tooltip-content.left.warning::before {
   border-left: 8px solid @orange300;
+  margin-left: -4px;
 }
 
 .tooltip-content.left.danger::after,
