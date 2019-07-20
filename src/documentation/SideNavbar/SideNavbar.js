@@ -36,6 +36,9 @@ export const SideNavbar = () => (
         <NavLink to='/floatingactionmenu'>Floating Action Menu</NavLink>
       </div>
       <div className={'sideNavbarItem'}>
+        <NavLink to='/icon'>Icons</NavLink>
+      </div>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/modal'>Modals</NavLink>
       </div>
       <div className={'sideNavbarItem'}>

@@ -1,7 +1,34 @@
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');
+
+// Path for dist for fonts.
+// Webpack web server will change this to local path when deving locally
+@fontPath: '../assets/fonts';
+
+@font-face {
+  font-family: 'DINWebPro';
+
+  src: url('@{fontPath}/DINWebPro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DINWebPro Light';
+
+  src: url('@{fontPath}/DINWebPro-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'kaizen-ui';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('@{fontPath}/kaizen-ui.woff') format('woff');
+}
+
 // Fonts
 @font: 'Open Sans', sans-serif;
 @brandFont: 'DINWebPro', 'Open Sans', sans-serif;
 @codeFont: 'Menlo', 'Courier', monospace;
+@iconFont: 'kaizen-ui';
 
 // Font Sizes
 @fontSizeSmall: 12px;

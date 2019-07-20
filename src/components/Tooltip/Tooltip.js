@@ -17,7 +17,11 @@ const TooltipContainer = ({
   const innerClasses = cx('tooltip-body', styleClasses)
   return (
     <div className='tooltip-backdrop'>
-      <div className={classes} onMouseLeave={() => toggleShow(true)}>
+      <div
+        className={classes}
+        onClick={() => toggleShow(false)}
+        onMouseLeave={() => toggleShow(false)}
+        >
         <span className='tooltip-header'>{header}</span>
         <p className={innerClasses}>{message}</p>
       </div>
@@ -29,6 +33,7 @@ export const Tooltip = ({
   children,
   header,
   message,
+  openOnClick,
   position='top',
   className,
   danger,

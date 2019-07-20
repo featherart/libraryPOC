@@ -5,6 +5,7 @@ import {
   ButtonPage,
   DropMenuPage,
   FloatingActionMenuPage,
+  IconPage,
   ModalPage,
   TooltipPage
 } from './documentation/pages'
@@ -18,6 +19,7 @@ export const GlobalRouter = () => (
     <ButtonPage path='/button' />
     <DropMenuPage path='/dropdown' />
     <FloatingActionMenuPage path='/floatingactionmenu' />
+    <IconPage path='/icon' />
     <ModalPage path='/modal' />
     <TooltipPage path='/tooltip' />
     <DefaultError path='/error' default />
