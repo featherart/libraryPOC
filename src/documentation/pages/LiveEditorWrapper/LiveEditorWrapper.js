@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { theme } from '../theme'
 
-export const LiveEditorWrapper = ({ component, code, inLine, dark }) => {
+const LiveEditorWrapper = ({ component, code, inLine, dark }) => {
   // this causes invariant violation, but why??
   //const [showCode, toggleShowCode] = useState(true)
   return (
@@ -13,3 +13,5 @@ export const LiveEditorWrapper = ({ component, code, inLine, dark }) => {
     </LiveProvider>
   )
 }
+
+export { LiveEditorWrapper }

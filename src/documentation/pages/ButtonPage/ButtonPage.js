@@ -49,18 +49,20 @@ const dangerCode = `
 </div>
 `.trim()
 
-export const ButtonPage = () => (
-  <div className='pageContainer'>
-    <div className='title'>Buttons</div>
-    <div className='subTitle'>Brand Buttons</div>
+export const ButtonPage = () => {
+  return (
+    <div className='pageContainer'>
+      <div className='title'>Buttons</div>
+      <div className='subTitle'>Brand Buttons</div>
       <Description description={description} />
-      <LiveEditorWrapper component={{Button}} code={code} />
-    <div className='subTitle'>Utility Buttons</div>
+      <LiveEditorWrapper component={{ Button }} code={code} />
+      <div className='subTitle'>Utility Buttons</div>
       <Description description={utilityDescription} />
-      <LiveEditorWrapper component={{Button}} code={utilityCode} />
-    <div className='subTitle'>Danger Buttons</div>
+      <LiveEditorWrapper component={{ Button }} code={utilityCode} />
+      <div className='subTitle'>Danger Buttons</div>
       <Description description={dangerDescription} />
-      <LiveEditorWrapper component={{Button}} code={dangerCode} />
-    <PropsTable attributes={attributes} />
-  </div>
-)
+      <LiveEditorWrapper component={{ Button }} code={dangerCode} />
+      <PropsTable attributes={attributes} />
+    </div>
+  )
+}
