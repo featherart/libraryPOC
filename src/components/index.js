@@ -1,4 +1,5 @@
 export { Alert } from './Alert'
+export { Avatar } from './Avatar'
 export { Button } from './Button'
 export { DropMenu } from './DropMenu'
 export { FloatingActionMenu } from './FloatingActionMenu'

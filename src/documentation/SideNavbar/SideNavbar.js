@@ -27,6 +27,9 @@ export const SideNavbar = () => (
         <NavLink to='/alert'>Alerts</NavLink>
       </div>
       <div className={'sideNavbarItem'}>
+	<NavLink to='/avatar'>Avatar</NavLink>
+      </div>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/button'>Buttons</NavLink>
       </div>
       <div className={'sideNavbarItem'}>

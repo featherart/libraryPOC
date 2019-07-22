@@ -1,4 +1,5 @@
 export { AlertPage } from './AlertPage'
+export { AvatarPage } from './AvatarPage'
 export { ButtonPage } from './ButtonPage'
 export { DropMenuPage } from './DropMenuPage'
 export { FloatingActionMenuPage } from './FloatingActionMenuPage'

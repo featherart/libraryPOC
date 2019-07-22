@@ -2,6 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 import {
   AlertPage,
+  AvatarPage,
   ButtonPage,
   DropMenuPage,
   FloatingActionMenuPage,
@@ -16,6 +17,7 @@ export const GlobalRouter = () => (
   <Router>
     <Home path='/' component={Home} />
     <AlertPage path='/alert' />
+    <AvatarPage path='/avatar' />
     <ButtonPage path='/button' />
     <DropMenuPage path='/dropdown' />
     <FloatingActionMenuPage path='/floatingactionmenu' />
