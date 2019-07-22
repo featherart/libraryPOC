@@ -13,8 +13,20 @@ export const attributes = [
   },
   {
     name: 'size',
-    default: '',
-    type: 'enum: [small, medium, large]',
+    default: 'medium',
+    type: 'enum: [smaller, small, medium, large]',
     description: 'Size of the icon.'
+  },
+  {
+    name: 'strong',
+    default: 'false',
+    type: 'boolean',
+    description: 'Makes icon bold.'
+  },
+  {
+    name: 'className',
+    default: '',
+    type: 'String',
+    description: 'Custom styling.'
   }
 ]

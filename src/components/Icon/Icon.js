@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import './icon.less'
-//import icon from '../../assets/SOL_Bug.svg'
 
 export const Icon = ({
   name,

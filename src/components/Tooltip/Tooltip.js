@@ -13,7 +13,6 @@ const TooltipContainer = ({
     { dark }
   )
 
-  console.log('styleClasses', styleClasses)
   const innerClasses = cx('tooltip-body', styleClasses)
   return (
     <div className='tooltip-backdrop'>
