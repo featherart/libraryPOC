@@ -1,0 +1,334 @@
+@import '../../styles/app';
+
+.ui.option {
+  position: relative;
+
+  display: inline-flex;
+
+  &.disabled {
+    opacity: 0.4;
+
+    label {
+      cursor: not-allowed;
+    }
+  }
+
+  label {
+    display: flex;
+
+    margin-right: @smaller;
+
+    cursor: pointer;
+    text-transform: capitalize;
+
+    align-items: center;
+  }
+
+  input {
+    position: absolute;
+
+    opacity: 0;
+  }
+
+  /*
+  toggle styling
+*/
+  .toggle {
+    position: relative;
+
+    display: inline-block;
+
+    width: 40px;
+    height: 20px;
+    top: 1px;
+
+    color: @lightGray000;
+
+    &.text {
+      width: 54px;
+      top: 2px;
+    }
+  }
+
+  /*
+  The toggle
+*/
+  .toggle-check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: ease;
+
+    background-color: @lightGray300;
+
+    &.disabled {
+      background-color: @lightGray300;
+    }
+  }
+
+  .toggle-check::before {
+    position: absolute;
+    top: 1px;
+    bottom: 1.5px;
+    left: 1.5;
+    right: 1px;
+
+    width: 20px;
+    height: 20px;
+
+    content: '';
+    transition: 0.2s;
+    transition-timing-function: ease;
+
+    border-radius: 50%;
+    background-color: @lightGray000;
+  }
+
+  /*
+  plain toggle checked
+*/
+
+  input:checked + .toggle-check {
+    background-color: @brand;
+
+    &.disabled {
+      background-color: @darkGray300;
+    }
+  }
+
+  input:checked + .toggle-check.text::after {
+    content: 'ON';
+    margin: 10px;
+    vertical-align: top;
+  }
+
+  input:focus + .toggle-check {
+    box-shadow: 0 0 1px @brand;
+  }
+
+  /*
+  how far the toggle slides
+*/
+  input:checked + .toggle-check::before {
+    transform: translateX(19px);
+  }
+
+  /*
+  toggle with ON/OFF text styling
+*/
+  input + .toggle-check.text::after {
+    content: 'OFF';
+    font-size: 10px;
+    margin-left: 23px;
+    vertical-align: top;
+  }
+
+  input:checked + .toggle-check.text::after {
+    content: 'ON';
+    margin: 10px;
+    vertical-align: top;
+  }
+
+  input:checked + .toggle-check.text::before {
+    transform: translateX(34px);
+  }
+
+  input:checked + .toggle-check {
+    background-color: @brand;
+  }
+
+  input:focus + .toggle-check {
+    box-shadow: 0 0 1px @brand;
+  }
+
+  input:checked + .toggle-check::before {
+    transform: translateX(20px);
+  }
+
+  .toggle-check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: ease;
+
+    border-radius: 17px;
+    background-color: @lightGray500;
+
+    &.label-content {
+      margin-left: 40px;
+    }
+  }
+
+  .toggle span.label-content {
+    margin-left: 40px;
+  }
+
+  .toggle.text span.label-content {
+    margin-left: 50px;
+  }
+
+  .toggle-check::before {
+    position: absolute;
+    top: 1.5px;
+    bottom: 1px;
+    left: 1.5px;
+
+    width: 17px;
+    height: 17px;
+
+    content: '';
+    transition: 0.2s;
+    transition-timing-function: ease;
+
+    border-radius: 50%;
+    background-color: @lightGray000;
+  }
+
+  .radio-check {
+    border-radius: 50%;
+
+    &::after {
+      border-radius: 50%;
+    }
+  }
+
+  .radio-check,
+  .checkbox-check {
+    position: relative;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+
+    pointer-events: none;
+
+    border: 1px solid @lightGray500;
+
+    flex-shrink: 0;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      display: inline-block;
+
+      width: 100%;
+      height: 100%;
+      margin: auto;
+
+      content: '';
+      transform: scale(0.6);
+      vertical-align: middle;
+
+      background: none;
+    }
+  }
+
+  .label {
+    //.label-small-dark;
+
+    margin-left: @smaller;
+
+    .label-content {
+      //.label-small-dark;
+
+      white-space: nowrap;
+    }
+  }
+
+  .sublabel-content {
+    font-weight: @fontWeightNormal;
+
+    display: block;
+
+    text-transform: none;
+  }
+
+  /*
+  checkbox checked
+*/
+
+  input:checked + .checkbox-check::after {
+    background: @brandGreen500;
+  }
+
+  input:focus + .checkbox-check {
+    box-shadow: 0 0 4px 1px @lightGray500;
+  }
+
+  /*
+  radio checked
+*/
+
+  input:checked + .radio-check::after {
+    background: @brandGreen500;
+  }
+
+  input:focus + .radio-check {
+    box-shadow: 0 0 4px 1px @lightGray500;
+  }
+
+  // Align children to the top when there's a sublabel
+
+  &.sublabel {
+    > label {
+      align-items: flex-start;
+
+      .label {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .label-content {
+        line-height: 12px;
+      }
+    }
+  }
+}
+
+/*******************************
+          Option Group
+*******************************/
+.ui.option-group {
+  display: inline-flex;
+  flex-direction: column;
+
+  // Inner option styling when not using the inline option.
+  :not(.inline)& {
+    .ui.option:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+
+  // Inner option styling when using the inline option.
+  &.inline {
+    flex-direction: row;
+
+    width: 100%;
+
+    .ui.option:not(:last-of-type) {
+      margin-right: 15px;
+    }
+
+    .ui.option:not(:first-of-type) {
+      &.toggle-check {
+        margin-left: 60px;
+      }
+    }
+  }
+}

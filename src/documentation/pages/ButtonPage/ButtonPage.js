@@ -1,16 +1,10 @@
-import React from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import React, { useState } from 'react'
 import { theme } from '../theme'
 import { Button } from '../../../components'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
 import { LiveEditorWrapper } from '../LiveEditorWrapper'
-import {
-  attributes,
-  description,
-  utilityDescription,
-  dangerDescription
-} from './config'
+import { attributes, description, utilityDescription, dangerDescription } from './config'
 import '../pageStyles.less'
 
 const code = `
@@ -50,19 +44,19 @@ const dangerCode = `
 `.trim()
 
 export const ButtonPage = () => {
-  return (
-    <div className='pageContainer'>
-      <div className='title'>Buttons</div>
-      <div className='subTitle'>Brand Buttons</div>
-      <Description description={description} />
-      <LiveEditorWrapper component={{ Button }} code={code} />
-      <div className='subTitle'>Utility Buttons</div>
-      <Description description={utilityDescription} />
-      <LiveEditorWrapper component={{ Button }} code={utilityCode} />
-      <div className='subTitle'>Danger Buttons</div>
-      <Description description={dangerDescription} />
-      <LiveEditorWrapper component={{ Button }} code={dangerCode} />
-      <PropsTable attributes={attributes} />
-    </div>
-  )
+	return (
+		<div className='pageContainer'>
+			<div className='title'>Buttons</div>
+			<div className='subTitle'>Brand Buttons</div>
+			<Description description={description} />
+			<LiveEditorWrapper component={{ Button }} code={code} />
+			<div className='subTitle'>Utility Buttons</div>
+			<Description description={utilityDescription} />
+			<LiveEditorWrapper component={{ Button }} code={utilityCode} />
+			<div className='subTitle'>Danger Buttons</div>
+			<Description description={dangerDescription} />
+			<LiveEditorWrapper component={{ Button }} code={dangerCode} />
+			<PropsTable attributes={attributes} />
+		</div>
+	)
 }

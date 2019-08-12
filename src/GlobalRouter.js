@@ -8,10 +8,13 @@ import {
   FloatingActionMenuPage,
   IconPage,
   ModalPage,
+  OptionPage,
+  PaginationPage,
   TooltipPage
 } from './documentation/pages'
 import { Home } from './documentation/Home'
 import { DefaultError } from './documentation/DefaultError'
+import { Pagination } from './components';
 
 export const GlobalRouter = () => (
   <Router>
@@ -23,6 +26,8 @@ export const GlobalRouter = () => (
     <FloatingActionMenuPage path='/floatingactionmenu' />
     <IconPage path='/icon' />
     <ModalPage path='/modal' />
+    <OptionPage path='/option' />
+    <PaginationPage path='/pagination' />
     <TooltipPage path='/tooltip' />
     <DefaultError path='/error' default />
   </Router>

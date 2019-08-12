@@ -45,6 +45,12 @@ export const SideNavbar = () => (
         <NavLink to='/modal'>Modals</NavLink>
       </div>
       <div className={'sideNavbarItem'}>
+        <NavLink to='/option'>Option</NavLink>
+      </div>
+      <div className={'sideNavbarItem'}>
+        <NavLink to='/pagination'>Pagination</NavLink>
+      </div>
+      <div className={'sideNavbarItem'}>
         <NavLink to='/tooltip'>Tooltips</NavLink>
       </div>
     </aside>

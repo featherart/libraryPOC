@@ -1,9 +1,9 @@
 import React from 'react'
 import { PropsTable } from '../PropsTable'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { attributes, description, secondDescription } from './config'
 import { theme } from '../theme'
 import { Icon, Tooltip } from '../../../components'
-import { attributes, description, secondDescription } from './config'
 import { Description } from '../Description'
 import '../pageStyles.less'
 
