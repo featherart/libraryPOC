@@ -1,6 +1,4 @@
-@import '../../styles/color';
-@import '../../styles/fonts';
-@import '../../styles/spacing';
+@import '../../styles/app';
 
 .pageContainer {
   display: flex;
@@ -23,7 +21,7 @@
 
 .displayArea {
   min-height: @supermax;
-  margin: @large 0;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +29,10 @@
 
   &.dark {
     background-color: rgba(33, 33, 33, 0.99);
+  }
+
+  &.small {
+    min-height: 85px;
   }
 }
 
@@ -40,6 +42,7 @@
   align-items: center;
   height: 50px;
   width: 50px;
+  margin-top: 85px;
 }
 .iconTable i:hover {
   background-color: @teal100;

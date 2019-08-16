@@ -37,12 +37,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    historyApiFallback: true,
-    host: 'localhost',
-    port: 3001,
-    hot: false
-  },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
@@ -53,6 +47,9 @@ module.exports = {
     })
   ],
   devServer: {
+    historyApiFallback: true,
+    port: 3001,
+    host: 'localhost',
     contentBase: './dist',
     hot: true
   }

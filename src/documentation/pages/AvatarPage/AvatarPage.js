@@ -1,13 +1,10 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { theme } from '../theme'
 import { Avatar } from '../../../components'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
 import { LiveEditorWrapper } from '../LiveEditorWrapper'
-import {
-  attributes,
-  description,
-} from './config'
+import { attributes, description } from './config'
 import '../pageStyles.less'
 
 const code = `
@@ -31,19 +28,19 @@ const noGravatarCode = `
 `.trim()
 
 export const AvatarPage = () => {
-  return (
-    <div className='pageContainer'>
-      <div className='title'>Avatar</div>
-      <div className='subTitle'>Default Avatar</div>
-        <Description description={description} />
-        <LiveEditorWrapper component={{ Avatar }} code={code} />
-      <div className='subTitle'>Sizes</div>
-        <LiveEditorWrapper component={{ Avatar }} code={sizeCode} />
-      <div className='subTitle'>Custom Sizes</div>
-        <LiveEditorWrapper component={{ Avatar }} code={customCode} />
-      <div className='subTitle'>No Gravatar</div>
-        <LiveEditorWrapper component={{ Avatar }} code={noGravatarCode} />
-      <PropsTable attributes={attributes} />
-    </div>
-  )
+	return (
+		<div className='pageContainer'>
+			<div className='title'>Avatar</div>
+			<div className='subTitle'>Default Avatar</div>
+			<Description description={description} />
+			<LiveEditorWrapper component={{ Avatar }} code={code} small />
+			<div className='subTitle'>Sizes</div>
+			<LiveEditorWrapper component={{ Avatar }} code={sizeCode} small />
+			<div className='subTitle'>Custom Sizes</div>
+			<LiveEditorWrapper component={{ Avatar }} code={customCode} />
+			<div className='subTitle'>No Gravatar</div>
+			<LiveEditorWrapper component={{ Avatar }} code={noGravatarCode} small />
+			<PropsTable attributes={attributes} />
+		</div>
+	)
 }
