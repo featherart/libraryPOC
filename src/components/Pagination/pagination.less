@@ -1,5 +1,108 @@
 @import '../../styles/app';
 
 .ui.pagination {
-  background-color: red;
+  /* Aligning right since all mocks show pagination on right side.
+  However we could use props to position this component in future. */
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  /* GENERAL PAGINATION OVERRIDES */
+  .pagination {
+    font-family: @brandFont;
+    font-size: 14px;
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .pagination input {
+    font-family: @brandFont;
+    font-size: 14px;
+    color: @darkGray500;
+  }
+
+  .pagination-prev,
+  .pagination-next {
+    margin-left: 2px;
+    margin-right: 2px;
+    line-height: 36px;
+    min-width: 15px;
+    border: none;
+    outline: none;
+  }
+
+  .pagination-prev a::after,
+  .pagination-next a::after,
+  .pagination-first a::after,
+  .pagination-last a::after {
+    display: inline-block;
+
+    /* padding size acts as the size of the arrow */
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    content: '';
+
+    border: solid #cbcbcb;
+    border-width: 0 2px 2px 0;
+  }
+
+  .pagination-prev a::after,
+  .pagination-first a::after {
+    transform: rotate(135deg);
+  }
+
+  .pagination-next a::after,
+  .pagination-last a::after {
+    transform: rotate(-45deg);
+  }
+
+  .pagination-prev.pagination-disabled a::after,
+  .pagination-next.pagination-disabled a::after,
+  .pagination-first.pagination-disabled a::after,
+  .pagination-last.pagination-disabled a::after {
+    border-color: #ebebeb;
+  }
+
+  .pagination-prev,
+  .pagination-next,
+  .pagination-first,
+  .pagination-last {
+    line-height: 36px;
+
+    min-width: 15px;
+
+    border: none;
+    outline: none;
+  }
+
+  .pagination-prev a,
+  .pagination-item a,
+  .pagination-next a,
+  .pagination-first a,
+  .pagination-last a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .double-arrow {
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-arrow {
+    margin: -5px;
+  }
 }
