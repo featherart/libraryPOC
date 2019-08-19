@@ -2,17 +2,17 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [ 'babel-polyfill', './src/index.js'],
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
+    // path: __dirname + '/dist',
+    // publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: /node_modules(?!(\/|\\)buble)/,
         use: ['babel-loader']
       },
       {
@@ -50,7 +50,13 @@ module.exports = {
     historyApiFallback: true,
     port: 3001,
     host: 'localhost',
-    contentBase: './dist',
-    hot: true
+    compress: true,
+    contentBase: __dirname + 'dist',
+    hot: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    }
   }
 }

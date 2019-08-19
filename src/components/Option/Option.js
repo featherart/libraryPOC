@@ -1,6 +1,6 @@
 import React from 'react'
-import './option.less'
 import cx from 'classnames'
+import './option.less'
 
 //import { createLabel } from '../../lib'
 //import { OptionGroup } from './OptionGroup'

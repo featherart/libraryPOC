@@ -4,8 +4,8 @@ import { Pagination } from '../../../components/Pagination'
 import { theme } from '../theme'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
-import '../pageStyles.less'
 import { attributes, description } from './config'
+import '../pageStyles.less'
 
 const code = `
 function mountPagination() {
