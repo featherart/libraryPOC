@@ -2,17 +2,20 @@ import React from 'react'
 import cx from 'classnames'
 import './option.less'
 
-//import { createLabel } from '../../lib'
-//import { OptionGroup } from './OptionGroup'
+import { OptionGroup } from './OptionGroup'
 
-// const createLabel = (
-//   label,
-//   subLabel,
-//   labelComponent
-// ) => {
-//   return <div className='label'>{labelComponent(label, subLabel)}</div>
-// }
-//export const Option = () => <div>hi option</div>
+const createLabel = (
+  label,
+  subLabel
+) => {
+  console.log('label', label)
+  return (
+    <div className='label'>
+      <span className='label-content'>{label}</span>
+      {subLabel && <span className='sublabel-content'>{subLabel}</span>}
+    </div>
+  )
+}
 
 export const Option = ({
   type = 'radio',
@@ -44,8 +47,10 @@ export const Option = ({
           defaultChecked={checked}
         />
         <span className={typeClass} />
-        {label}
+        {createLabel(label, subLabel)}
       </label>
     </div>
   )
 }
+
+Option.Group = OptionGroup
