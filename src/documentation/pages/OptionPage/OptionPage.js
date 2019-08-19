@@ -1,9 +1,9 @@
 import React from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { Option } from '../../../components/Option'
 import { theme } from '../theme'
 import { PropsTable } from '../PropsTable'
 import { Description } from '../Description'
+import { LiveEditorWrapper } from '../LiveEditorWrapper'
 import { attributes, description, toggleDescription } from './config'
 import '../pageStyles.less'
 
@@ -22,13 +22,7 @@ export const OptionPage = () => (
     <Description description={description} />
     <div className='subTitle'>Toggles</div>
     <Description description={toggleDescription} />
-    <div>
-      <LiveProvider code={code} theme={theme} scope={{ Option }}>
-        <LiveEditor />
-        <LiveError />
-        <LivePreview className={'displayArea'} />
-      </LiveProvider>
-    </div>
+    <LiveEditorWrapper component={{Option}} code={code} />
     <PropsTable attributes={attributes} />
   </div>
 )
