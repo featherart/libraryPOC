@@ -50,6 +50,9 @@ export const SideNavbar = () => (
       <div className={'sideNavbarItem'}>
         <NavLink to='/pagination'>Pagination</NavLink>
       </div>
+      <div className='sideNavbarItem'>
+	<NavLink to='/progress'>Progress</NavLink>
+      </div>
       <div className={'sideNavbarItem'}>
         <NavLink to='/tooltip'>Tooltips</NavLink>
       </div>

@@ -1,0 +1,65 @@
+@import '../../styles/app';
+
+.ui.progress {
+  .bar-color-variants();
+
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  height: @fontSizeNormal;
+
+  background: @brandGreen300;
+
+  .bar {
+    height: @fontSizeNormal;
+  }
+
+  /* Colors */
+  &:not(.multiple) .bar {
+    background: @brandGreen500;
+  }
+
+  .bar-light {
+    background: @brandGreen300;
+  }
+
+  .bar-dark {
+    background: @brandGreen500;
+  }
+
+  /* Multiple */
+  &.multiple {
+    background: @lightGray300;
+  }
+}
+
+/*******************************
+        Progress Group
+*******************************/
+.ui.progress-group.inline {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/*******************************
+        Parametric Mixins
+*******************************/
+@colors: brandGreen, green, teal, blue, orange, red, purple;
+.bar-color-variants(@i: length(@colors)) when (@i > 0) {
+  .bar-color-variants(@i - 1);
+
+  @color: extract(@colors, @i);
+  &.@{color} .bar-light,
+  &.@{color} {
+    background: ~"@{@{color}300}";
+  }
+  &.@{color} .bar-dark,
+  &.@{color}:not(.multiple) .bar-0 {
+    background: ~"@{@{color}500}";
+  }
+}

@@ -10,6 +10,7 @@ import {
   ModalPage,
   OptionPage,
   PaginationPage,
+  ProgressPage,
   TooltipPage
 } from './documentation/pages'
 import { Home } from './documentation/Home'
@@ -28,6 +29,7 @@ export const GlobalRouter = () => (
     <ModalPage path='/modal' />
     <OptionPage path='/option' />
     <PaginationPage path='/pagination' />
+    <ProgressPage path='/progress' />
     <TooltipPage path='/tooltip' />
     <DefaultError path='/error' default />
   </Router>
