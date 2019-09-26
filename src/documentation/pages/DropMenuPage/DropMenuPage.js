@@ -22,6 +22,7 @@ function mountDropMenu() {
           { icon: 'sync-line', action: 'Forbidden Item', disabled: true, onClick: () => console.log('nope')}
         ]
       }
+      handleClick={(e) => console.log('clicked', e)}
     />
   )
 }
